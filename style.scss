@@ -1,0 +1,337 @@
+
+@font-face {
+    font-family: "beybas";
+    src: url(./assests/font/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+    font-family: pop;
+    src: url(./assests/font/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family:roboto;
+    src: url(./assests/font/RobotoCondensed-VariableFont_wght.ttf);
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.weatherApp{
+    width: 100%;
+    height: 100vh;
+    background: rgb(0,23,143);
+    // background: linear-gradient(30deg, rgba(0,23,143,1) 0%, rgba(255,190,253,1) 84%);
+    background: linear-gradient(45deg, rgba(255, 0, 0, 1) 0%, rgba(255, 165, 0, 1) 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .content{
+        width: 80%;
+        height: 85vh;  display: flex;
+        align-items: center;
+        justify-content: center;
+        // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        // background-color: rgb(165, 165, 165);
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.23);
+        border-radius: 16px;
+        // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4.8px);
+        -webkit-backdrop-filter: blur(4.8px);
+        border: 1px solid rgba(255, 255, 255, 0.44);
+
+        .container{
+            width: 95%;
+            height: 90%;
+            // border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // justify-content: center;
+
+            .wrap{
+                width: 100%;
+                nav{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+
+                    .logo{
+                        h1{
+                            color: white;
+                            font-family: beybas;
+                            letter-spacing: 3px;
+                            font-size: 2rem;
+                        }
+                    }
+
+                    .inp_box{
+                        width: 70%;
+
+                        // background-color: rgba(128, 128, 128, 0.562);
+                        display: flex;
+                        flex-direction: row;
+                        position: relative;
+                        align-items: center;
+                        justify-content: center;
+
+                        .fa-magnifying-glass{
+                            color:white;
+                            position: absolute;
+                            left: 20px;
+                        }
+
+                        .serch_bar{
+                            // background-color: rgba(255, 255, 255, 0.767);
+                            outline: none;
+                            width: 100%;
+                            height: 40px;
+                            border-radius: 20px;
+                            border: none;
+                            color: white;
+                            padding:  0px 0px 0px 6%;
+
+                            background: rgba(255, 255, 255, 0.12);
+                            // border-radius: 16px; 
+                            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                            backdrop-filter: blur(15.3px);
+                            -webkit-backdrop-filter: blur(15.3px);
+                            border: 1px solid rgba(255, 255, 255, 0.3);
+
+                        }
+                    }
+                  
+                }
+                .hero{
+                    width: 100%;
+            
+                    .texts_wrap{
+                       display: grid;
+                       grid-template-columns:  auto auto;
+                    // background-color: pink;
+                    height: 100%;
+                    width: 100%;
+                    // border: 1px solid red;
+                    margin-top: 50px;
+                    //    align-items:baseline;
+
+                        .left{
+                            // border: 1px solid black;
+                            display: flex;
+                            flex-direction: column;
+
+                            h4{
+                            font-size: 6rem;
+                            font-family: roboto;
+                            text-transform: uppercase;
+                            color: white;
+                            font-weight: 300;
+                            // letter-spacing: 1px;
+                        
+                        }
+                        .weather_txts{
+                            // border:  1px solid black;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            .row{
+                                display: flex;
+                                gap:2rem;
+                                align-items: center;
+                            }
+                            .mini_icon{
+                                height: 40px;
+                                width: 40px;
+                                overflow: hidden;
+                            }
+                        }
+
+
+                        .title_city{
+                                
+                            color: white;
+                            font-family: beybas;
+                            text-transform: uppercase;
+                            font-size: 3em;
+                            letter-spacing: 5px;
+                        
+                    }
+                        h5{
+                            
+                            font-size: 2rem;
+                            font-family: roboto;
+                            text-transform: uppercase;
+                            color: white;
+                            font-weight: 300;
+                            letter-spacing: 4px;
+                        }
+                        h6{
+                            color: white;
+                            font-family: roboto;
+                            font-size: 1.8rem;
+                            font-weight: lighter;
+                            letter-spacing: 0px;
+
+                            .mini_icon{
+                                height: 40px;
+                                width: 40px;
+                                overflow: hidden;
+                            }
+                        }
+                        .icon_text{
+                            display: flex;
+                            gap: 1rem;
+                            margin-top: 20px;
+                            align-items: center;
+                            justify-content: start;
+
+                            .icon{
+                                color: white;
+                                font-size: 2rem;
+
+                                .drop_icon{
+                                    height: 40px;
+                                    width: 40px;
+                                }
+                            }
+                            .chance{
+                              
+                                color: white;
+                                font-size: 3rem;
+                                font-family: roboto;
+                                font-weight: lighter;
+                            }
+                        }
+                        .right{
+                            border: 1px solid green;
+                        }
+                      
+                    }
+                    .center_con{
+                        // border: 1px solid black;
+                        // border: 1px solid green;
+
+                        display: flex;
+                        // background-color: rgba(255, 0, 0, 0.349);
+                        width: 100%;
+
+                        .img_wrap{
+                            // height: 500px;
+                            width: 100%;
+                            overflow: hidden;
+                            // background-color: rgba(255, 192, 203, 0.445);
+                            // border: 1px solid black;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            // gap: 2rem;
+                            
+                            .imag_txt{
+                                display: flex;
+                                gap: 3rem;
+
+                                .digree{
+                                    
+                                    h1{
+                                        font-family: roboto;
+                                        // }
+                                    }
+                                }
+                            }
+                            .weather_text{
+                                margin-top: 30px;
+                                display: flex;
+                                flex-direction: column;
+
+                                span{
+                                    color: white;
+                                    font-size: 2rem;
+                                    font-family: roboto;
+                                    text-transform: uppercase;
+                                    font-weight: 200;
+                                }
+                            }
+                            .cloud{
+                                // color: white;
+                                height: 300px;
+                                    width: 300px;
+                            // border: 1px solid black;
+
+                            }
+                            // .cloud_img{
+                            //     height: 400px;
+                            //     width: 400px;
+                            // }
+                        }
+                        // .digree{
+                        //     // height: 400px;
+                        //     // width: 400px;
+                        //     border: 1px solid black;
+                        //     display: flex;
+                        //     align-items: center;
+                        //     justify-content: center;
+
+                        //     h1{
+                        //         color: white;
+                        //         font-family: roboto;
+                        //         font-size: 10rem;
+                        //     }
+
+                        // }
+                    }
+                    .digree{
+                        // height: 400px;
+                        // width: 400px;
+                        // border: 1px solid black;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .celcius_icon{
+                            height: 120px;
+                            width: 120px;
+                        }
+
+                        h1{
+                            position: relative;
+                            color: white;
+                            font-family: roboto;
+                            font-size: 6rem;
+                            font-weight: lighter;
+                            
+
+                            .cel{
+                                // background-color: black;
+                                // color: red;
+                                // font-weight: lighter;
+                            font-family: roboto;
+
+                                font-size: 5rem;    
+                                // font-family: pop;
+                            font-weight: lighter;
+
+                                margin-top: -20px;
+                                position:relative;
+                                top: -20px;
+                                right: -5px;
+
+
+                                }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+}
