@@ -3,6 +3,7 @@ let cityNameText = document.getElementById("city_text");
 let cityName_inp = document.getElementById("city_inp");
 let temperatureDiv = document.getElementById('temperatureDiv')
 let serch_btn = document.getElementById("serch_btn");
+let city_inp = document.getElementById("city_inp");
 
 let sunSet = document.getElementById("sunset");
 let sunrise = document.getElementById("sunrise");
@@ -94,7 +95,9 @@ async function getData() {
 
 
 
-
+city_inp.addEventListener("input",()=>{
+    getData()
+})
 
 
 
