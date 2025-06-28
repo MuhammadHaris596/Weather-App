@@ -11,13 +11,12 @@ let sunrise = document.getElementById("sunrise");
 let windSp_txt = document.getElementById("wind_sp");
 let humidity = document.getElementById("rain_per");
 let rain_icon = document.getElementById("rain_icon");
-let temp
 let weatherDescrip = document.getElementById("we_txt");
 
 
 async function getData() {
     try{
-        if(cityName_inp.value.trim() !== ''){
+        if(cityName_inp.value.trim().toLowerCase() !== ''){
             await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName_inp.value}&appid=244006e372fb520e56e50b3032f7bcf1`)
         //    .then((re)=> res.json()) .then( (data)=> weatherData = data);
            .then((res) => res.json() ).then((data) => weatherData=data); 
@@ -48,7 +47,7 @@ async function getData() {
              
 
 
-            cityNameText.innerText = cityName_inp.value;
+                cityNameText.innerText = weatherData.name;
                 windSp_txt.innerText = `${weatherData.wind.speed} Km/h`;
                 humidity.innerText = `${weatherData.main.humidity} %`;
                 sunrise.innerText = `${weatherData.sys.sunrise}`;
